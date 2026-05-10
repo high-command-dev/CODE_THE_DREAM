@@ -1,20 +1,30 @@
-/* Minimal, neutral styling for a simple two-view weather app */
-* { box-sizing: border-box; }
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: #202124;
   background: #f6f8fa;
 }
+
 .wrap {
   max-width: 760px;
   margin: 28px auto;
   padding: 16px;
 }
-header h1 { margin: 0 0 6px 0; font-size: 1.25rem; }
-header p { margin: 0 0 12px 0; color: #4b4f54; }
 
-nav { display: flex; gap: 8px; margin-bottom: 12px; }
+header h1 {
+  margin: 0 0 6px 0;
+  font-size: 1.25rem;
+}
+
+header p {
+  margin: 0 0 12px 0;
+  color: #4b4f54;
+}
+
+nav {
+  margin-bottom: 12px;
+}
+
 nav a {
   display: inline-block;
   padding: 8px 12px;
@@ -22,9 +32,13 @@ nav a {
   border: 1px solid #e1e4e8;
   color: #24292e;
   text-decoration: none;
-  border-radius: 6px;
 }
-nav a.active { background: #0366d6; color: #fff; border-color: #0356b6; }
+
+nav a.active {
+  background: #0366d6;
+  color: #fff;
+  border: 10px solid lightblue;
+}
 
 .search-row {
   display: flex;
@@ -34,33 +48,59 @@ nav a.active { background: #0366d6; color: #fff; border-color: #0356b6; }
 .search-row input {
   flex: 1;
   padding: 9px 10px;
-  border: 1px solid #d6dbe1;
+  border: 1px solid white;
   border-radius: 6px;
   font: inherit;
   background: #fff;
 }
 .search-row button {
   padding: 9px 14px;
-  border: 1px solid #d6dbe1;
+  border: 1px solid white;
   border-radius: 6px;
   background: #fff;
   font: inherit;
   cursor: pointer;
 }
-.search-row button:hover { background: #f1f3f5; }
 
-main h2 { margin: 0 0 6px 0; font-size: 1.05rem; }
-.muted { color: #6b6f74; margin: 0 0 10px 0; }
+.search-row button:hover {
+  background: lightcoral;
+  color: white;
+}
 
-#status-message { color: #333; margin-bottom: 10px; min-height: 1.2rem; }
-#app { display: grid; gap: 10px; }
-.card { background: #fff; border: 1px solid #e6e6e6; padding: 12px; border-radius: 8px; }
-.card header { display:flex; justify-content:space-between; align-items:center; }
-.card strong { font-size: 1rem; }
-.meta { color: #555; font-size: 0.95rem; margin-top: 6px; }
+main h2 {
+  margin: 0 0 6px 0;
+  font-size: 1.05rem;
+}
 
-@media (max-width:480px) {
-  .wrap { padding: 10px; }
-  nav { gap: 6px; }
-  .search-row { flex-direction: column; }
+.muted {
+  color: #6b6f74;
+  margin: 0 0 10px 0;
+}
+
+#status-message {
+  color: #333;
+  margin-bottom: 10px;
+  min-height: 1.2rem;
+}
+
+#app {
+  display: grid;
+  gap: 10px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid white;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card strong {
+  font-size: 1rem;
 }

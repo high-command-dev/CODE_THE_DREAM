@@ -8,16 +8,17 @@
 </head>
 <body>
 	<div class="wrap">
-		<header>
-			<h1>Weather: Temperature & Conditions</h1>
-			<p id="location-label">Loading location…</p>
-		</header>
+        <header>
+            <h1>Weather: Temperature & Conditions</h1>
+            <p id="location-label">Loading location...</p>
+        </header>
+        
+        <form id="location-form" class="search-row">
+            <input id="location-input" type="text" placeholder="Enter a city or place..." autocomplete="off"/>
+            <button type="submit">Search</button>
 
-		<form id="location-form" class="search-row">
-			<input id="location-input" type="text" placeholder="Enter a city or place" autocomplete="off" />
-			<button type="submit">Search</button>
-		</form>
-
+        </form>
+		
 		<nav>
 			<a href="#temperature" data-view-link="temperature">Temperatures</a>
 			<a href="#conditions" data-view-link="conditions">Conditions</a>
@@ -25,10 +26,9 @@
 
 		<main>
 			<h2 id="view-title">Temperatures</h2>
-			<p id="view-description" class="muted">Hourly forecast for the selected field.</p>
-
-			<div id="status-message" aria-live="polite"></div>
-			<div id="app"></div>
+            <p id="view-description"></p>
+            <div id="status-message"></div>
+            <div id="app"></div>
 		</main>
 	</div>
 
