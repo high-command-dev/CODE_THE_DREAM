@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Simple Weather — Temperature & Conditions</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<div class="wrap">
+		<header>
+			<h1>Weather: Temperature & Conditions</h1>
+			<p id="location-label">Loading location…</p>
+		</header>
+
+		<form id="location-form" class="search-row">
+			<input id="location-input" type="text" placeholder="Enter a city or place" autocomplete="off" />
+			<button type="submit">Search</button>
+		</form>
+
+		<nav>
+			<a href="#temperature" data-view-link="temperature">Temperatures</a>
+			<a href="#conditions" data-view-link="conditions">Conditions</a>
+		</nav>
+
+		<main>
+			<h2 id="view-title">Temperatures</h2>
+			<p id="view-description" class="muted">Hourly forecast for the selected field.</p>
+
+			<div id="status-message" aria-live="polite"></div>
+			<div id="app"></div>
+		</main>
+	</div>
+
+	<script type="module" src="script.js"></script>
+</body>
+</html>
